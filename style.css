@@ -1,0 +1,161 @@
+/* style.css */
+
+html, body {
+  height: 90%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+/*
+  /* This centers our sketch horizontally. */
+  justify-content: left;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:1;
+}
+
+@media (min-width:600px){
+	body{
+		padding:48px 0 48px 15vw;
+		font-size:48px
+	}
+}
+
+@media (min-width:600px) and (max-width:1023px){
+	body:before{
+		top:15vh;
+		right:-50vw;
+		width:130vw;
+		height:130vw
+	}
+	body:after{
+		top:-25vh;
+		right:-20vw;
+		width:65vw;
+		height:65vw}
+	}
+@media (min-width:1024px){
+	body:before{
+		top:8vh;
+		right:-26vw;
+		width:110vw;
+		height:110vw
+	}
+	body:after{
+		top:-45vh;
+		right:-12vw;
+		width:55vw;
+		height:55vw
+	}
+}
+
+h1,p,ul{
+	margin:0;
+	padding:0
+}
+
+h1{
+	margin:0;
+	font-size:inherit;
+	font-weight:400;
+	line-height:.8}
+a{
+	position:relative;
+	color:inherit;
+	text-decoration:none;
+	transition:.2s
+}
+
+a:focus:after, a:hover:after{
+	content:"";
+	position:absolute;
+	top:57%;
+	left:-1%;
+	display:block;
+	width:102%;
+	height:1px;
+	background-color:#252222}
+
+::-moz-focus-inner{
+	padding:0;
+	border:0
+}
+
+:focus{
+	outline:0
+}
+
+::selection{
+	background:#eef3ff
+}
+
+::-moz-selection{
+	background:#eef3ff
+}
+
+.content{
+	z-index:1;
+	position:relative;
+	display:-webkit-box;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	flex-direction:column;
+	-webkit-box-pack:justify;
+	justify-content:space-between;
+	height:100%
+}
+
+.title{
+	font-size:24px
+	font-family:Montserrat+Alternates, sans-serif;
+	font-weight: 700;
+}
+
+.links{
+	font-family:Lora,serif;
+	font-weight:700;
+}
+
+.bio{
+	margin-top:15vh;
+	margin-bottom:25vh;
+	max-width:440px
+	font-size: 20px;
+}
+
+@media (min-width:600px){
+	.bio{
+		margin-bottom:37vh;
+		}
+	}
+.links{
+	list-style:none;
+	font-size:18px
+}
+
+.links__item:first-child{
+	margin-bottom:.5em
+}
+
+@media (min-width:600px){
+	.links__item{display:inline-block}
+	.links__item:first-child{margin-bottom:0}
+	.links__item:first-child:after{content:"—";margin:0 1em
+	}
+}
+
+#contentu {
+	position: relative;
+	z-index:2;
+}
+
+
