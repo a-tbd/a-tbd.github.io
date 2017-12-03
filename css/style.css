@@ -1,0 +1,231 @@
+/* style.css */
+
+@font-face {
+ font-family: "Pangram";
+ src: url("fonts/pangram/pangram-black-webfont.woff2") format("woff2"),
+        url("fonts/pangram/pangram-black-webfont.woff") format("woff");
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto; 
+}
+
+a { 
+  text-decoration: none; 
+  transition: 0.15s ease-in-out; 
+}
+
+a :hover {
+  color: red;
+}
+
+canvas {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	z-index: 1;
+} 
+
+#content {
+	position: relative; 
+	z-index: 2; 
+}
+
+/*landing page with logo and animated gradient background*/ 
+#page1 {
+	grid-row: 1;
+	height: 100vh;
+	animation: colorchange 60s;
+  animation-iteration-count: infinite;
+  -webkit-animation: colorchange 60s;
+  -webkit-animation-iteration-count: infinite;
+}
+    @keyframes colorchange
+    {
+      0%   {background: #F9F7E8;}
+      25%  {background: #FF8B8B;}
+      50%  {background: #B7E3E4;}
+      75%  {background: #FFEFE5;}
+      100% {background: #F9F7E8;}
+    }
+
+    @-webkit-keyframes colorchange 
+    {
+      0%   {background: #F9F7E8;}
+      25%  {background: #FF8B8B;}
+      50%  {background: #B7E3E4;}
+      75%  {background: #FFEFE5;}
+      100% {background: #F9F7E8;}
+    }
+}
+
+#page2 {
+	grid-row: 2;
+	height: 100vh;
+}
+
+#page3 {
+	grid-row: 3;
+	height: 100vh;
+}
+
+/*landing page styling*/
+.landing-page {
+	display: flex;
+  flex-flow: wrap;
+	justify-content: center;
+  align-items: center;
+}
+
+.logo-sketch{
+  position:relative;
+  clear: both;
+  border: 2px solid black;
+  padding: 50px;
+}
+
+.lp-buttons{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-content: center;
+}
+
+button {
+	display: inline;
+	border: none;
+	background: none;
+	outline: none;
+	font-family: Montserrat;
+	font-size: 1.3em;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	width: 10%;
+}
+
+.about-button {
+	float: left;
+	margin-right: 50px;
+}
+
+#work-button {
+	float: right;
+	margin-left: 50px;
+  font-family: Montserrat;
+  font-size: 1.3em;
+}
+
+/*about modal styling*/
+
+#about-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+#about-modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #000;
+  width: 60%;
+  text-align: left;
+}
+
+body.modal-open {
+  overflow-y: hidden;
+}
+
+.close{
+  color: #000;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-links, ul {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+}
+
+a.contact-links{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+} /* how to add space around each of the links?*/
+
+/* battery section */
+#battery-wrapper{
+  font-family: Pangram;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4C7EE;
+}
+
+.title-row{
+  position:absolute;
+  width: 100%;
+}
+
+.battery-title{
+  font-size: 7vw;
+  line-height: 100%;
+  padding-left: 10px;
+  margin-top:5px;
+}
+
+.battery-image-1{
+  width: 100vw;
+  height: 1000px;
+  margin-top: 10%;
+  background-image: url("../imgs/battery3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  justify-content: right;
+  overflow: hidden;
+  /*background-size: contain;*/
+  /*background-position: right;*/
+}
+
+.battery-text{
+  display: flex;
+  float: right;
+  flex-direction: column;
+  width: 30vw;
+  float: right;
+}
+
+p.battery{
+  margin-right: 30px;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  color: #112378;
+}
+
+.battery.p1{
+  margin-top: 50%;
+}
+
+/* recoded section */
