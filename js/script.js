@@ -8,10 +8,10 @@ $(document).ready(function() {
 	    win_height = $(window).height();
 
 	    if (win_width < 1030) {
-			$('#battery-image').css("background", "url(imgs/battery3-phone.jpg)  center"); //url(imgs/battery3crop.gif), 
+			$('#battery-image').css("background", "url(imgs/battery3crop.gif) center, url(imgs/battery3-phone.jpg)  center"); 
 
 		} else {
-			$('#battery-image').css("background", "url(imgs/battery3.jpg) left bottom"); //url(imgs/battery3.gif), 
+			$('#battery-image').css("background", "url(imgs/battery3.gif) left bottom, url(imgs/battery3.jpg) left bottom");
 		};
 
 
